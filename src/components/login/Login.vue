@@ -82,11 +82,11 @@
     background: url('../../images/starBucks.jpg') no-repeat;
 }
 .login_model {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 100px;
     position: absolute;
     top: 40%;
     right: 10%;
-    box-shadow: 5px 5px 5px 2px slategrey;
+    box-shadow: 8px 8px 5px 2px slategrey;
 }
 </style>

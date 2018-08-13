@@ -12,6 +12,8 @@ import Comment from '@/components/content/Comment.vue'
 // 用户管理
 import AdditionUser from '@/components/user/additionUser'
 import ActivityUser from '@/components/user/activityUser'
+// 404
+import Error from '@/components/common/404.vue'
 Vue.use(Router);
 Vue.use(iView);
 export default new Router({
@@ -29,10 +31,11 @@ export default new Router({
         children: [
             {path: '/index/firstScreen', component: FirstScreen, name: 'FirstScreen'},
             {path: '/content/comment', component: Comment, name: 'Comment'},
-            {path: '/content/article', component: Article, name: 'Article'},
+            {path: '/content/article', component: Article, name: 'Article', alias: '/weatherForecast'},
             {path: '/user/additionUser', component: AdditionUser, name: 'AdditionUser'},
-            {path: '/user/activityUser', component: ActivityUser, name: 'ActivityUser'}    
+            {path: '/user/activityUser', component: ActivityUser, name: 'ActivityUser'},
         ]
-    }
+    },
+    {path: '/*', component: Error}
   ]
 })

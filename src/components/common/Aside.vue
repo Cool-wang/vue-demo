@@ -25,6 +25,15 @@
                     <router-link to="/user/activityUser" tag="div" class="click_range"> 活跃用户</router-link>
                     </MenuItem>
                 </Submenu>
+                <Submenu name="3">
+                    <template slot="title">
+                        <Icon type="ios-people" />
+                        天气预报
+                    </template>
+                    <MenuItem name="3-1">
+                    <router-link to="/weatherForecast" tag="div" class="click_range">当地天气</router-link>
+                    </MenuItem>
+                </Submenu>
             </Menu>
     </div>
 </template>
