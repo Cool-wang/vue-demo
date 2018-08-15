@@ -1,4 +1,4 @@
-# vue_demo
+# vue + Iview 的后后台观赏系统。
 
 > A Vue.js project
 
