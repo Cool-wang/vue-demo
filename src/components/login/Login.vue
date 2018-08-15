@@ -72,6 +72,7 @@
     }
 </script>
 <style scoped>
+
 .login_container {
     position: absolute;
     top: 0;

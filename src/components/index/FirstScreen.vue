@@ -4,34 +4,34 @@
             <BreadcrumbItem to="/">首页</BreadcrumbItem>
             <BreadcrumbItem >欢迎页</BreadcrumbItem>
         </Breadcrumb>
-        <div class="firstScreen_content">
-        <Carousel v-model="value1" loop autoplay>
+        <div class="firstScreen_content" ref="contentBox">
+        <Carousel v-model="value1" loop autoplay :autoplay-speed="5000">
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img1 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img1 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img2 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img2 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img3 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img3 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img4 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img4 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img5 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img5 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img6 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img6 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img7 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img7 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img8 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img8 constantWh" ></div></div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel"><div class="firstScreen_img9 constantWh"></div></div>
+                <div class="demo-carousel"><div class="firstScreen_img9 constantWh" ></div></div>
             </CarouselItem>
         </Carousel>
         </div>
@@ -45,7 +45,14 @@
                 value1: 0
             }
         },
-        methods: {}
+        methods: {
+            transitionHeight() {
+                this.$refs.contentBox.style.height = '600px';
+            }
+        },
+        mounted() {
+            this.transitionHeight();
+        }
     }
 </script>
 <style scoped lang="less">
@@ -56,11 +63,11 @@
  left: 50%;
  transform: translateX(-50%);
  width: 800px;
- height: 600px;
-//  padding: 0px 50px 50px 50px;
+ height: 0px;
 padding:50px;
  border: 5px solid #ccc;
  box-shadow: 5px 5px 5px skyblue;
+ transition: height 2s 1s;
  .constantWh {
      width: 800px;
      height: 600px;
