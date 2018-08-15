@@ -14,6 +14,8 @@ import AdditionUser from '@/components/user/additionUser'
 import ActivityUser from '@/components/user/activityUser'
 // 404
 import Error from '@/components/common/404.vue'
+// 天气预报
+import QueryWeather from '@/components/weatherForecast/queryWeather.vue'
 Vue.use(Router);
 Vue.use(iView);
 export default new Router({
@@ -31,9 +33,10 @@ export default new Router({
         children: [
             {path: '/index/firstScreen', component: FirstScreen, name: 'FirstScreen'},
             {path: '/content/comment', component: Comment, name: 'Comment'},
-            {path: '/content/article', component: Article, name: 'Article', alias: '/weatherForecast'},
+            {path: '/content/article', component: Article, name: 'Article'},
             {path: '/user/additionUser', component: AdditionUser, name: 'AdditionUser'},
             {path: '/user/activityUser', component: ActivityUser, name: 'ActivityUser'},
+            {path: '/weatherForecast', component:QueryWeather, name: 'queryWeather'}
         ]
     },
     {path: '/*', component: Error}
